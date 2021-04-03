@@ -13,3 +13,10 @@ dependencies:
 * express-fileupload
 * jsonwebtoken
 * mongoose
+
+* HACIENDO CONECCION A BASE DE DATOS Y PLANTILLA BASICA DE BACKEND
+
+#### Part 02 ####
+* Agregando endpoint para registrar usuarios
+* Agregando AccessToken 
+* Agregando RefreshToken
