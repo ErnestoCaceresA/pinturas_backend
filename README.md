@@ -1,6 +1,6 @@
 ## MERN STACK PAJO-ECOMMERCE ##
 
-#### Part 01 ####
+#### Part 01 - setup ####
 dependencies:
 
 * bcrypt
@@ -14,9 +14,13 @@ dependencies:
 * jsonwebtoken
 * mongoose
 
-* HACIENDO CONECCION A BASE DE DATOS Y PLANTILLA BASICA DE BACKEND
+* HACIENDO CONEXION A BASE DE DATOS Y PLANTILLA BASICA DE BACKEND
 
-#### Part 02 ####
-* Agregando endpoint para registrar usuarios
+#### Part 02 : Register - AccessToken - RefreshToken ####
+* Agregando Register (endpoint para registrar usuarios)
 * Agregando AccessToken 
 * Agregando RefreshToken
+
+
+#### Part 03 - Login - Logout - Info User ####
+* Agregando Login (para que se logeen los usuarios existentes)
