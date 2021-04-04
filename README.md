@@ -47,3 +47,8 @@
 * No olvidar cuenta de cloudinary
 * Agregando upload  /api/upload (POST: para subir imagenes a cloudinary (solo admin))
 * Agregando destroy  /api/destroy (POST: para borrar imagenes de cloudinary mediante su public_id)
+
+#### Part 07 - Products(1) - CRUD ####
+
+* Creando Router, model, controlador de los productos, products.js
+* Agregando CRUD de productos /api/products (GET: para ver los productos, POST: para crear productos, DELETE: para borrar productos, PUT: para actualizar producto)
