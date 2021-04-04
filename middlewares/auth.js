@@ -8,7 +8,7 @@ const auth = (req, res, next) => {
         jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
             if(err) return res.status(400).json({msg: "Invalid Authentication"})
             // crear nuevo atributo a objeto req llamado user donde va a contener el "id, iat, exp" del usuario
-            req.user = user
+            req.user = user //DE AHORA EN ADELANTE TODOS LOS ROUTES QUE ESTEN DESPUES DE ESTE MIDDLEWARE TENDRAN ACCESO A ESTE NUEVO ATRIBUTO DE REQ
         })
         
         next()
