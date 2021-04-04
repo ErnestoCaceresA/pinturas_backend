@@ -1,24 +1,24 @@
 ## MERN STACK PAJO-ECOMMERCE ##
 
 #### Part 01 - setup ####
-dependencies:
 
-* bcrypt
-* cloudinary
-* concurrently
-* cookie-parser
-* cors
-* dotenv
-* express
-* express-fileupload
-* jsonwebtoken
-* mongoose
+* dependencies:
+    * bcrypt
+    * cloudinary
+    * concurrently
+    * cookie-parser
+    * cors
+    * dotenv
+    * express
+    * express-fileupload
+    * jsonwebtoken
+    * mongoose
 
 * HACIENDO CONEXION A BASE DE DATOS Y PLANTILLA BASICA DE BACKEND
 
 #### Part 02 : Register - AccessToken - RefreshToken ####
-* /user (Agregando route en server.js)
 
+* /user (Agregando route en server.js)
 * Agregando Register "/user/register" (endpoint para registrar usuarios)
 * Agregando AccessToken
 * Agregando RefreshToken
@@ -33,7 +33,11 @@ dependencies:
 #### Part 04 - Category(1) ####
 
 * /api  (Agregando route en server.js)
-* Agregando category /api/category (Metodo GET para ver las categorias que se encuentran en la base de datos)
+* Agregando category /api/category (Metodo GET para ver las categorias que se encuentran en la base de datos) getCategories
 * Creando categoryModel para base de datos
 * Creando categoryRouter, categoryCtrl
-* Creando middleware authAdmin
+* Creando middleware authAdmin (para verificar si el usuario es admin)
+
+#### Part 05 - Category(2) ####
+
+* Agregando CRUD de category /api/category (GET: para ver categorias, POST: para crear categoria(solo admin), DELETE: borrar categoria (solo admin), PUT: actualizar categoria (solo admin))
