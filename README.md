@@ -41,3 +41,9 @@
 #### Part 05 - Category(2) ####
 
 * Agregando CRUD de category /api/category (GET: para ver categorias, POST: para crear categoria(solo admin), DELETE: borrar categoria (solo admin), PUT: actualizar categoria (solo admin))
+
+#### Part 06 - Upload and Delete Image on Cloudinary ####
+
+* No olvidar cuenta de cloudinary
+* Agregando upload  /api/upload (POST: para subir imagenes a cloudinary (solo admin))
+* Agregando destroy  /api/destroy (POST: para borrar imagenes de cloudinary mediante su public_id)
