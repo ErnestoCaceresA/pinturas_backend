@@ -38,6 +38,43 @@ const userCtrl = {
             return res.status(500).json({msg: err.message})
         }
     },
+    login: async (req, res) => {
+        try {
+            const {email, password} = req.body;
+            // encontrar al usuario en la base de datos
+            const user = await Users.findOne({email})
+            if(!user) return res.status(400).json({msg: "El usuario no existe"})
+            // ver si coincide su contraseña con la que hizo al registrarse
+            const isMatch = await bcrypt.compare(password, user.password)
+            if(!isMatch) return res.status(400).json({msg: "Contraseña incorrecta"})
+
+            // if login is success, create access token and refresh token
+            const accesstoken = createAccessToken({id: user._id})
+            const refreshtoken = createRefreshToken({id: user._id})
+            res.cookie('refreshtoken', refreshtoken, {
+                httpOnly: true,
+                path: '/user/refresh_token'
+            })
+            
+            res.json({
+                msg: "Login Success!",
+                accesstoken
+            })
+
+        } catch (err) {
+            console.log(err);
+            return res.status(500).json({msg: err.message})
+        }
+    },
+    logout: async (req, res) => {
+        try {
+            res.clearCookie('refreshtoken', {path: '/user/refresh_token'})
+            return res.json({msg: "Logged out"})
+        } catch (err) {
+            console.log(err);
+            return res.status(500).json({msg: err.message})
+        }
+    },
     refreshToken: (req , res) => {
         try {
             const rf_token = req.cookies.refreshtoken;
@@ -53,11 +90,26 @@ const userCtrl = {
             res.json({rf_token})
 
         } catch (err) {
+            console.log(err)
+            return res.status(500).json({msg: err.message})
+        }
+    },
+    getUser: async (req, res) => {
+        try {
+            const user = await Users.findById(req.user.id).select("-password") //dentro del req.user que se creo en el middleware auth esta el id, y no se mostraá la contraseña
+            // res.json(req.user) //si tiene el token correcto del middleware auth ahi mismo se creo este atributo de req donde retorna el id junto con "iat" y "exp"
+            if(!user) return res.status(400).json({msg: "User doesnt exist"})
+
+            res.json(user)
+
+        } catch (err) {
+            console.log(err)
             return res.status(500).json({msg: err.message})
         }
     }
 }
 
+// -----------------------------------
 // funciones helpers
 
 const createAccessToken = (user) => {
