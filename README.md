@@ -52,3 +52,9 @@
 
 * Creando Router, model, controlador de los productos, products.js
 * Agregando CRUD de productos /api/products (GET: para ver los productos, POST: para crear productos, DELETE: para borrar productos, PUT: para actualizar producto)
+
+#### Part 08 - Products(2) - Filter , Sort, Pagination ####
+
+* Agregando APIfeatures clase en controllers/productCtrl.js
+* Agregando funcionalidad al GET de products para buscar productos por nombre, ordenar de menor a mayor el precio o el titulo y varias cosas mas /api/products?sort=price&title[regex]=silla
+* DOCUMENTACION DE COMO USAR EL GET PRODUCTOS EN EL CODIGO EN EL "APIfeatures" O EN POSTMAN "/api/products ---> GET, POST, DELETE, PUT productos" 
