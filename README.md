@@ -58,3 +58,8 @@
 * Agregando APIfeatures clase en controllers/productCtrl.js
 * Agregando funcionalidad al GET de products para buscar productos por nombre, ordenar de menor a mayor el precio o el titulo y varias cosas mas /api/products?sort=price&title[regex]=silla
 * DOCUMENTACION DE COMO USAR EL GET PRODUCTOS EN EL CODIGO EN EL "APIfeatures" O EN POSTMAN "/api/products ---> GET, POST, DELETE, PUT productos" 
+
+#### Part 12 - Client - Cart ####
+
+* Agregando el endpoint /user/addcart para guardar en la base de datos en el atributo "cart" todos los productos que agrgue el usuario es un arreglo con objetos dentro (los productos)
+* Agregando el router y el controlador para addcart

@@ -106,6 +106,21 @@ const userCtrl = {
             console.log(err)
             return res.status(500).json({msg: err.message})
         }
+    },
+    addCart: async (req, res) => {
+        try {
+            // encontrar al usuario
+            const user = await Users.findById(req.user.id)
+            if(!user) return res.status(400).json({msg: "No existe el usuario"})
+            // encontrarlo y actualizar su informacion de el atributo "cart" que es un arreglo y adentro se le mandan los objetos de los productos
+            await Users.findOneAndUpdate({_id: req.user.id}, {
+                cart: req.body.cart
+            })
+
+            return res.json({msg: "Añadido al carrito"})
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
     }
 }
 
