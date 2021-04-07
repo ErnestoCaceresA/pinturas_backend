@@ -63,3 +63,9 @@
 
 * Agregando el endpoint /user/addcart para guardar en la base de datos en el atributo "cart" todos los productos que agrgue el usuario es un arreglo con objetos dentro (los productos)
 * Agregando el router y el controlador para addcart
+
+
+#### Part 13 - Cart - Payment ####
+
+* Agregando payment  MODEL , CONTROLADOR , ROUTER para el backend del payment
+* Agregando ese path a el server.js /api/payment
