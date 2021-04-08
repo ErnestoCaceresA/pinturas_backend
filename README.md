@@ -69,3 +69,10 @@
 
 * Agregando payment  MODEL , CONTROLADOR , ROUTER para el backend del payment
 * Agregando ese path a el server.js /api/payment
+
+
+#### Part 14 - Payment - Order History ####
+
+* Actualizando el paymentCtrl.js para que actualize el atributo "sold" del producto el cual se vendió y tambien para guardar pedido en base de datos con las informacion del pedido y del usuario
+* Actualizando el userCtrl.js con un nuevo controlador llamado "history" para que busque en la base de datos en la coleccion de Payments los pedidos que coincidan con el id del usuario que esta haciendo la peticion y asi mandarle su historial de pedidos
+* Acutalizando el userRouter.js para agregar ese nuevo controlador en "/user/history/"
