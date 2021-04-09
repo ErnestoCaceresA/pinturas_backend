@@ -27,7 +27,7 @@ const categoryCtrl = {
             
             res.json(`Categoria ${name} creada satisfactoriamente`)
             
-        } catch (error) {
+        } catch (err) {
             console.log(err)
             return res.status(500).json({msg: err.message})
         }

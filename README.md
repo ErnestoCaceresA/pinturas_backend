@@ -76,3 +76,8 @@
 * Actualizando el paymentCtrl.js para que actualize el atributo "sold" del producto el cual se vendió y tambien para guardar pedido en base de datos con las informacion del pedido y del usuario
 * Actualizando el userCtrl.js con un nuevo controlador llamado "history" para que busque en la base de datos en la coleccion de Payments los pedidos que coincidan con el id del usuario que esta haciendo la peticion y asi mandarle su historial de pedidos
 * Acutalizando el userRouter.js para agregar ese nuevo controlador en "/user/history/"
+
+
+#### Part 15 - Client - Categories ####
+
+* debuggeando en  categoryCtrl.js en el atributo createCategory: de | catch (error) | a | catch (err) |
