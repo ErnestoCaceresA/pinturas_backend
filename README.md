@@ -81,3 +81,8 @@
 #### Part 15 - Client - Categories ####
 
 * debuggeando en  categoryCtrl.js en el atributo createCategory: de | catch (error) | a | catch (err) |
+
+#### Part 16 - Client - Create Product(1) ####
+
+* Cambiando el tiempo de expiracion del createAccessToken de 1 dia a 11 minutos y cambiando el tiempo de expiracion del createRefreshToken de 7 dias a 1 dia
+* quitando varios console.log(err)

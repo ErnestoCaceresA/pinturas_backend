@@ -35,7 +35,7 @@ const userCtrl = {
                 accesstoken
             })
         } catch (err) {
-            console.log(err)
+            // console.log(err)
             return res.status(500).json({msg: err.message})
         }
     },
@@ -63,7 +63,7 @@ const userCtrl = {
             })
 
         } catch (err) {
-            console.log(err);
+            // console.log(err);
             return res.status(500).json({msg: err.message})
         }
     },
@@ -72,7 +72,7 @@ const userCtrl = {
             res.clearCookie('refreshtoken', {path: '/user/refresh_token'})
             return res.json({msg: "Logged out"})
         } catch (err) {
-            console.log(err);
+            // console.log(err);
             return res.status(500).json({msg: err.message})
         }
     },
@@ -91,7 +91,7 @@ const userCtrl = {
             res.json({rf_token})
 
         } catch (err) {
-            console.log(err)
+            // console.log(err)
             return res.status(500).json({msg: err.message})
         }
     },
@@ -140,10 +140,10 @@ const userCtrl = {
 // funciones helpers
 
 const createAccessToken = (user) => {
-    return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {expiresIn: '1d'})
+    return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {expiresIn: '11m'})
 }
 const createRefreshToken = (user) => {
-    return jwt.sign(user, process.env.REFRESH_TOKEN_SECRET, {expiresIn: '7d'})
+    return jwt.sign(user, process.env.REFRESH_TOKEN_SECRET, {expiresIn: '1d'})
 }
 
 module.exports = userCtrl
