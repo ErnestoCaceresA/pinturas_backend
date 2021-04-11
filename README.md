@@ -89,4 +89,8 @@
 
 #### Part 17 - Client - Create Product(2) ####
 
-* Agregando |  maxAge: 7*24*60*60*1000 // 7 dias | al res.cookie del login y register en el userCtrl.js
+* Agregando |  maxAge: (7 dias en milisegundo) // 7 dias | al res.cookie del login y register en el userCtrl.js
+
+#### Part 20 - Client - Filter - Sort - Pagination ####
+
+* Agreagando validacion en el categoryCtrl.js en el deleteCategory, para que solo pueda borrar la categoria si no existen en la base de datos mas productos con esa categoría
