@@ -86,3 +86,7 @@
 
 * Cambiando el tiempo de expiracion del createAccessToken de 1 dia a 11 minutos y cambiando el tiempo de expiracion del createRefreshToken de 7 dias a 1 dia
 * quitando varios console.log(err)
+
+#### Part 17 - Client - Create Product(2) ####
+
+* Agregando |  maxAge: 7*24*60*60*1000 // 7 dias | al res.cookie del login y register en el userCtrl.js
