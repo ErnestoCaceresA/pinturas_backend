@@ -13,6 +13,7 @@ const paymentCtrl = {
     },
     createPayment: async(req, res) => {
         try {
+            console.log(req)
             const user = await Users.findById(req.user.id).select('name email')
             if(!user) return res.status(400).json({msg: "Usuario no existe"}) 
             // obtener informacion de la compra y del usuario
@@ -36,6 +37,7 @@ const paymentCtrl = {
             res.json({msg: "Payment Success!"})
             
         } catch (err) {
+            console.log(err)
             return res.status(500).json({msg: err.message})
         }
     }
